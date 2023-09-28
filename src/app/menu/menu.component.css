@@ -1,0 +1,20 @@
+ul {
+    margin: 0;
+    border-bottom: 1px solid gray;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    width: 100px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+li:hover {
+    background-color: linen;
+}
