@@ -1,1 +1,20 @@
-<p>elerhetosegek works!</p>
+<ul>
+    <li>Cégnév: {{ cegnev }}</li>
+    <li>Cím: {{ cim }}</li>
+    <!--
+        <li *ngIf="telefon[0] == '+'">Telefon: {{ telefon }}</li>
+    -->
+    <li *ngIf="latszikATelefon">Telefon: {{ telefon }}</li>
+    <li *ngIf="!latszikATelefon">Nincs telefonszám</li>
+    
+    <li>Oktatók:
+        <ol>
+            <li *ngFor="let oktato of oktatok">{{ oktato }}</li>
+        </ol>
+    </li>
+</ul>
+<img src="{{kep}}" alt="" />
+<img [src]="kep" alt="" />
+
+<input type="text" value="{{telefon}}"/>
+<input type="text" [value]="telefon" />
