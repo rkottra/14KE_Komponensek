@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ElerhetosegekComponent {
 
     public latszikATelefon:boolean = true;
+    
     public cegnev : string = "Jedlik Ányos Technikum";
     public cim    : string = "9021 Győr, Szent István út 7.";
     public telefon: string = "+36 (96) 529-480";

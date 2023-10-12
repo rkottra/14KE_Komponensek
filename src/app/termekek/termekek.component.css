@@ -1,0 +1,9 @@
+div.termek {
+    border  : 1px solid gray;
+    width   : 15.5%;
+    margin  : 1%;
+    height  : 150px;
+    background-color: antiquewhite;
+    padding : 1%;
+    float   : left;
+}

@@ -11,6 +11,7 @@ import { LoginAblakComponent } from './login-ablak/login-ablak.component';
 import { FooldalComponent } from './fooldal/fooldal.component';
 import { ElerhetosegekComponent } from './elerhetosegek/elerhetosegek.component';
 import { TermekekComponent } from './termekek/termekek.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TermekekComponent } from './termekek/termekek.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

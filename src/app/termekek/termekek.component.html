@@ -1,1 +1,14 @@
-<p>termekek works!</p>
+<input type="text" [(ngModel)]="keresendoErtek" />
+<button (click)="Kattintas()">Keresés</button>
+<div>
+
+    <div class="termek" 
+        
+        *ngFor="let termek of seged">
+        {{termek.nev}}
+        <br>
+        {{100 * termek.ar}}.-Ft
+        <input type="range" [value]="termek.ar" 
+            max="20" min="0" readonly/>
+    </div>
+</div>
