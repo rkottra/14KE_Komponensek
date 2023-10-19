@@ -12,6 +12,7 @@ import { FooldalComponent } from './fooldal/fooldal.component';
 import { ElerhetosegekComponent } from './elerhetosegek/elerhetosegek.component';
 import { TermekekComponent } from './termekek/termekek.component';
 import { FormsModule } from '@angular/forms';
+import { LogoutAblakComponent } from './logout-ablak/logout-ablak.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     LoginAblakComponent,
     FooldalComponent,
     ElerhetosegekComponent,
-    TermekekComponent
+    TermekekComponent,
+    LogoutAblakComponent
   ],
   imports: [
     BrowserModule,

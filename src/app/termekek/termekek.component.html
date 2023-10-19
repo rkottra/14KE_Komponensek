@@ -2,9 +2,8 @@
 <button (click)="Kattintas()">Keresés</button>
 <div>
 
-    <div class="termek" 
+    <div class="termek" *ngFor="let termek of seged">
         
-        *ngFor="let termek of seged">
         {{termek.nev}}
         <br>
         {{100 * termek.ar}}.-Ft

@@ -1,12 +1,12 @@
-<div>
+<div *ngIf="!this.szerviz.bevagyokJelentkezve">
     <form>
-        <label>Felhasználó név:</label>
-        <input type="text" />
+        <label for="username">Felhasználó név:</label>
+        <input name="username" id="username"
+                type="text" [(ngModel)]="user.username" /> <br>
+        <label for="password">Jelszó:</label>
+        <input name="password" id="password"
+                type="password" [(ngModel)]="user.password"/>
         <br>
-        <label>Jelszó:</label>
-        <input type="password" />
-        <br>
-        <br>
-        <input type="button" value="Login" />
+        <input type="button" value="Login" (click)="Kattintas()"/>
     </form>
 </div>

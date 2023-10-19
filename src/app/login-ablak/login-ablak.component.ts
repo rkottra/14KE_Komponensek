@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserModell } from '../modellek/user-modell';
+import { UserService } from '../szervizek/user.service';
 
 @Component({
   selector: 'app-login-ablak',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class LoginAblakComponent {
 
+  public user:UserModell = new UserModell();
+
+  constructor (public szerviz:UserService) {
+
+  }
+
+  Kattintas() {
+    this.szerviz.Login(this.user.username, 
+                        this.user.password);
+  }
 }

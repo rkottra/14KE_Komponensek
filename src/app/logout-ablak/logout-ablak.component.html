@@ -1,0 +1,9 @@
+<div *ngIf="this.szerviz.bevagyokJelentkezve">
+    <form>
+        Kedves {{this.szerviz.bejelentkezettUserNeve}}!
+        <br>
+        <input type="button" value="Logout" 
+            (click)="Kattintas()"/>
+    </form>
+</div>
+
