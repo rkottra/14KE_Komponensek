@@ -13,6 +13,7 @@ import { ElerhetosegekComponent } from './elerhetosegek/elerhetosegek.component'
 import { TermekekComponent } from './termekek/termekek.component';
 import { FormsModule } from '@angular/forms';
 import { LogoutAblakComponent } from './logout-ablak/logout-ablak.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LogoutAblakComponent } from './logout-ablak/logout-ablak.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

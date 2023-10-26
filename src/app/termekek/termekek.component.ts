@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TermekModell } from '../modellek/termek-modell';
-
+import { TermekService } from '../szervizek/termek.service';
 
 @Component({
   selector: 'app-termekek',
@@ -11,7 +11,8 @@ export class TermekekComponent {
 
   public keresendoErtek:string = "";
 
-  public termekek: TermekModell[] = [
+  
+  /*public termekek: TermekModell[] = [
       {
         nev: 'alma',
         ar: 15,
@@ -24,20 +25,29 @@ export class TermekekComponent {
       new TermekModell('datolya',76),
       new TermekModell('banán'),
       new TermekModell('narancs'),
-  ];
-  public seged: TermekModell[] = this.termekek;
+  ];*/
+  public seged: TermekModell[] 
+            = this.termekszerviz.termekek;
 
-  constructor() {
-    this.Kattintas();
+  constructor(private termekszerviz:TermekService) {
+    this.termekszerviz
+          .TermekFrissites()
+          .subscribe( (erkezoadat)=> {
+              this.Kattintas();
+          })
   }
 
   Kattintas() {
-    this.seged = this.termekek.filter(
-      (termek) => termek.nev
+    this.seged = this.termekszerviz.termekek.filter(
+      (termek) => termek.title
                 .toLowerCase()
                 .includes(this.keresendoErtek
                               .toLowerCase())
-                  && termek.ar > 0
+                  && termek.price > 0
     );
+  }
+
+  deleteProduct(id:number) {
+    this.termekszerviz.deleteOneProduct(id);
   }
 }
